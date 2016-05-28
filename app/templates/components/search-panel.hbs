@@ -1,5 +1,4 @@
 <hr>
-{{input value=search}}
-<button type="submit" {{action "doSearch"}}>Szukaj</button>
+{{input value=searchText}}
+<button type="submit" {{action "searchAction" searchText}}>Szukaj</button>
 <hr>
-{{yield}}

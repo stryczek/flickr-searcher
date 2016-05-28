@@ -1,9 +1,2 @@
-{{search-panel search}}
-
-{{search-panel.search}}
-
-{{#each model as |photo|}}
-    <a href="{{photo.url_o}}" target="_blank">
-        <img src="{{photo.url_t}}" alt="" />
-    </a>
-{{/each}}
+{{search-panel}}
+{{flickr-photos photos=model}}
