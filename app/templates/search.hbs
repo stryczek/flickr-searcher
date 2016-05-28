@@ -1,2 +1,6 @@
-{{search-panel searchAction=(action 'doSearch')}}
+{{search-panel searchAction=(action 'searchAction')}}
 {{photo-gallery photos=model}}
+
+<!-- Temporary buttons Change it to infinity scroll -->
+<button {{action "searchPrevPage"}}>Prev</button>
+<button {{action "searchNextPage"}}>Next</button>
