@@ -1,4 +1,6 @@
 <hr>
-{{input value=searchText}}
-<button type="submit" {{action "searchAction" searchText}}>Szukaj</button>
+<form {{action "searchAction" searchText on="submit"}}>
+    {{input value=searchText}}
+    <button type="submit">Szukaj</button>
+</form>
 <hr>
