@@ -1,0 +1,41 @@
+@import url("normalize.css");
+@import url("boilerplate.css");
+
+.search-panel {
+    position: fixed;
+    background: green;
+    width: 100%;
+    height: 28px;
+    z-index: 1;
+}
+
+.photo-gallery {
+    position: relative;
+    background: red;
+    width: 100%;
+    height: 100%;
+    padding: 32px 0 182px 0;
+    z-index: 0;
+}
+
+.photo-gallery-item {
+    position: relative;
+    float: left;
+    margin: 10px;
+}
+
+.photo-gallery-favourites {
+    position: fixed!important;
+    width: 100%;
+    height: 150px;
+    bottom: 0!important;
+    left: 0;
+    background: blue;
+    z-index: 1;
+}
+
+.photo-gallery-favourites .remove-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

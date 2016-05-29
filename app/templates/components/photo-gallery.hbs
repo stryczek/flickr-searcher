@@ -1,6 +1,10 @@
 {{#each photos as |photo|}}
-    <a href="{{photo.url_o}}" target="_blank">
-        <img src="{{photo.url_t}}" alt="" />
-    </a>
+    {{photo-gallery-item photo=photo}}
 {{/each}}
 {{yield}}
+
+<div style="clear: both"></div>
+<button {{action 'prevPageAction'}}>Prev</button>
+<button {{action 'nextPageAction'}}>Next</button>
+
+{{photo-gallery-favourites}}

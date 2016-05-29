@@ -1,7 +1,7 @@
+<div class="search-panel">
+    <form {{action 'searchAction' searchText on="submit"}}>
+        {{input value=searchText}}
+        <button type="submit">{{btnText}}</button>
+    </form>
+</div>
 {{yield}}
-<hr>
-<form {{action "doSearchAction" searchText on="submit"}}>
-    {{input value=searchText}}
-    <button type="submit">{{btnText}}</button>
-</form>
-<hr>

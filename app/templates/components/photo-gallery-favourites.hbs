@@ -1,0 +1,6 @@
+{{#each favourites as |photo|}}
+    {{#photo-gallery-item photo=photo}}
+        <button {{action removeItem photo}} class="remove-item">X</button>
+    {{/photo-gallery-item}}
+{{/each}}
+{{yield}}
