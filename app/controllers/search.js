@@ -2,18 +2,23 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   currentSearch: {
-    text: "a",
+    text: "",
     licence: 7,
     page: 1
   },
   doSearch() {
-    this.transitionToRoute('search', {
-      queryParams: {
-        text: this.currentSearch.text,
-        licence: this.currentSearch.licence,
-        page: this.currentSearch.page
-      }
-    });
+    try {
+      //TODO Error when run in tests
+      this.transitionToRoute('search', {
+        queryParams: {
+          text: this.currentSearch.text,
+          licence: this.currentSearch.licence,
+          page: this.currentSearch.page
+        }
+      });
+    } catch (e) {
+      console.log(e);
+    }
   },
   actions: {
     searchAction(searchText) {
@@ -30,8 +35,10 @@ export default Ember.Controller.extend({
       this.doSearch();
     },
     searchPrevPage() {
-      this.currentSearch.page -= 1;
+      if (this.currentSearch.page > 1) {
+        this.currentSearch.page -= 1;
+      }
       this.doSearch();
-    }
+    },
   }
 });

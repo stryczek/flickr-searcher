@@ -1,8 +1,8 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('flickr-photos-search', 'Unit | Serializer | flickr photos search', {
+moduleForModel('photo', 'Unit | Serializer | photo', {
   // Specify the other units that are required for this test.
-  needs: ['serializer:flickr-photos-search']
+  needs: ['serializer:photo']
 });
 
 // Replace this with your real tests.

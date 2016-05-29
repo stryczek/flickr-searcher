@@ -1,6 +1,7 @@
+{{yield}}
 <hr>
-<form {{action "searchAction" searchText on="submit"}}>
+<form {{action "doSearchAction" searchText on="submit"}}>
     {{input value=searchText}}
-    <button type="submit">Szukaj</button>
+    <button type="submit">{{btnText}}</button>
 </form>
 <hr>
