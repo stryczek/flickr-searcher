@@ -1,5 +1,10 @@
 import Ember from 'ember';
 
+/**
+* photo-gallery-favourites - saving photo-gallery items in localStorage
+*
+* @component photo-gallery-favourites
+*/
 export default Ember.Component.extend({
   classNames: ['photo-gallery-favourites'],
   favourites: [],
@@ -47,7 +52,7 @@ export default Ember.Component.extend({
     favs[itemIndex] = favs[targetIndex];
     favs[targetIndex] = tmp;
     favs.arrayContentDidChange(0);
-    
+
     localStorage.setItem('favPhotos', JSON.stringify(favs));
   },
   dragOver(event) {

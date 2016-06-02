@@ -1,5 +1,10 @@
 import Ember from 'ember';
 
+/**
+* photo-gallery - component is listing images from array "photos"
+*
+* @component photo-gallery
+*/
 export default Ember.Component.extend({
   classNames: ['photo-gallery'],
   actions: {

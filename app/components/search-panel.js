@@ -1,5 +1,10 @@
 import Ember from 'ember';
 
+/**
+* search-panel - component for search bar, run callSearchAction on button click
+*
+* @component search-panel
+*/
 export default Ember.Component.extend({
   actions: {
     callSearchAction(searchText) {

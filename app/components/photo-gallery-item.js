@@ -1,5 +1,10 @@
 import Ember from 'ember';
 
+/**
+* photo-gallery-item - item representing photo from photo-gallery and photo-gallery-favourites
+*
+* @component photo-gallery-item
+*/
 export default Ember.Component.extend({
   isFavourite: false,
   classNames: ['photo-gallery-item'],
