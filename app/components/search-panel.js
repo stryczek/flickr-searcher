@@ -2,9 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    searchAction(searchText) {
-      if (typeof this.searchInnerAction === "function") {
-        this.searchInnerAction(searchText);
+    callSearchAction(searchText) {
+      if (typeof this.get('searchAction') === "function") {
+        this.sendAction('searchAction', searchText);
       } else {
         console.log("No search action to call!");
       }

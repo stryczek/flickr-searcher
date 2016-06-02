@@ -3,17 +3,16 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   classNames: ['photo-gallery'],
   actions: {
-    prevPageAction() {
-      if (typeof this.prevPageInnerAction === "function") {
-        //this.sendAction('prevPageInnerAction');
+    callPrevPageAction() {
+      if (typeof this.get('prevPageAction') === "function") {
+          this.sendAction('prevPageAction');
       } else {
         console.log("No prev page action to call!");
       }
     },
-    nextPageAction() {
-      if (typeof this.nextPageInnerAction === "function") {
-          this.nextPageInnerAction();
-          //this.sendAction('nextPageInnerAction');
+    callNextPageAction() {
+      if (typeof this.get('nextPageAction') === "function") {
+          this.sendAction('nextPageAction');
       } else {
         console.log("No prev page action to call!");
       }

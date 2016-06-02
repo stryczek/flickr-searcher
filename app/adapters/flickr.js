@@ -6,6 +6,7 @@ export default DS.RESTAdapter.extend({
   host: 'https://api.flickr.com',
   namespace: 'services/rest',
   pathForType() {
+    //console.log("?method=" + this.apiMethod + "&api_key=" + this.apiKey + "&" + this.apiFormat + "&" + this.apiOthers.join("&"));
     return "?method=" + this.apiMethod + "&api_key=" + this.apiKey + "&" + this.apiFormat + "&" + this.apiOthers.join("&");
   }
 });

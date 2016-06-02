@@ -11,5 +11,6 @@ export default Model.extend({
   isfriend: attr('string'),
   isfamily: attr('string'),
   url_t: attr('string'),
-  url_o: attr('string')
+  url_o: attr('string'),
+  license: attr('string')
 });

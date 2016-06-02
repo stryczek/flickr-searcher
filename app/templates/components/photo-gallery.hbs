@@ -1,10 +1,12 @@
 {{#each photos as |photo|}}
-    {{photo-gallery-item photo=photo}}
+    {{#photo-gallery-item photo=photo}}
+
+    {{/photo-gallery-item}}
 {{/each}}
 {{yield}}
 
 <div style="clear: both"></div>
-<button {{action 'prevPageAction'}}>Prev</button>
-<button {{action 'nextPageAction'}}>Next</button>
+<button {{action 'callPrevPageAction'}}>Prev</button>
+<button {{action 'callNextPageAction'}}>Next</button>
 
 {{photo-gallery-favourites}}

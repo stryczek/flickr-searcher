@@ -1,6 +1,5 @@
 {{#each favourites as |photo|}}
-    {{#photo-gallery-item photo=photo}}
+    {{#photo-gallery-item photo=photo isFavourite=true callSetDragTarget=(action 'setDragTarget')}}
         <button {{action removeItem photo}} class="remove-item">X</button>
     {{/photo-gallery-item}}
 {{/each}}
-{{yield}}

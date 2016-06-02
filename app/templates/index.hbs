@@ -1,1 +1,3 @@
-{{search-panel searchAction=(action 'searchAction') btnText="Szukaj"}}
+{{search-panel searchAction=(action 'indexSearchAction') btnText="Szukaj" searchText=indexSearchText}}
+
+{{photo-gallery photos=model nextPageAction=(action 'indexSearchNextPage') prevPageAction=(action 'indexSearchPrevPage')}}
